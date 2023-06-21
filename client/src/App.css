@@ -1,8 +1,113 @@
-.list {
-  text-align: left;
-  max-width: 750px;
-  margin: auto;
+
+
+body {
+  background: linear-gradient(45deg, #00b2ff, #00fff3, #ff00dd, #ff0000);
+  background-size: 400% 400%;
+  animation: gradientChange 15s ease-in-out infinite;
 }
+
+h4{
+  color: #fff;
+}
+label{
+  color: #fff;
+}
+
+
+@keyframes gradientChange {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+  margin-top: 20px;
+}
+
+.navbar {
+    position: relative;
+  width: calc(100% - 100px);
+  min-height: calc(100vh - 280px);
+  min-height: 10px;
+
+  box-shadow: 0 15px 35px rgba(255, 255, 255, 0.05);
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  padding: 20px;;
+  }
+
+.navbar:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: inherit;
+  filter: blur(10px);
+  z-index: -1;
+}
+
+.navbar-brand {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-body {
+  font-size: 1rem;
+}
+
+
+
+.contenedorHeader .navbar-brand
+{
+color: #ffffff;
+font-size: 1.5rem;
+text-decoration: none;
+font-weight: 700;
+}
+.contenedorHeader .nav-item
+{
+  color: white;
+font-size: 1.2rem;
+text-decoration: none;
+font-weight: 700;
+}
+
+.contenedorHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 15px 35px rgba(0,0, 0, 0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border-top: 1px soid rgba(255, 255, 255,0.25);
+  border-left: 1px soid rgba(255, 255, 255,0.25);
+}
+
 
 .submit-form {
   max-width: 300px;
@@ -11,5 +116,11 @@
 
 .edit-form {
   max-width: 300px;
+  margin: auto;
+}
+
+.list {
+  text-align: left;
+  max-width: 750px;
   margin: auto;
 }
