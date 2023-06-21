@@ -95,7 +95,7 @@ class Tutorial extends Component {
       .then(response => {
         console.log(response.data);
         this.setState({
-          message: "The tutorial was updated successfully!"
+          message: "La cancion se subio correctamente!"
         });
       })
       .catch(e => {
@@ -124,7 +124,7 @@ class Tutorial extends Component {
             <h4>Tutorial</h4>
             <form>
               <div className="form-group">
-                <label htmlFor="title">Title</label>
+                <label htmlFor="title">Nombre</label>
                 <input
                   type="text"
                   className="form-control"
@@ -134,7 +134,7 @@ class Tutorial extends Component {
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="description">Description</label>
+                <label htmlFor="description">Artista</label>
                 <input
                   type="text"
                   className="form-control"
@@ -146,7 +146,7 @@ class Tutorial extends Component {
 
               <div className="form-group">
                 <label>
-                  <strong>Status:</strong>
+                  <strong>Estatus:</strong>
                 </label>
                 {currentTutorial.published ? "Published" : "Pending"}
               </div>
@@ -157,14 +157,14 @@ class Tutorial extends Component {
                 className="badge badge-primary mr-2"
                 onClick={() => this.updatePublished(false)}
               >
-                UnPublish
+                Pendiente
               </button>
             ) : (
               <button
                 className="badge badge-primary mr-2"
                 onClick={() => this.updatePublished(true)}
               >
-                Publish
+                Crear
               </button>
             )}
 
@@ -172,7 +172,7 @@ class Tutorial extends Component {
               className="badge badge-danger mr-2"
               onClick={this.deleteTutorial}
             >
-              Delete
+              Eliminar
             </button>
 
             <button
@@ -180,14 +180,14 @@ class Tutorial extends Component {
               className="badge badge-success"
               onClick={this.updateTutorial}
             >
-              Update
+              Actualizar
             </button>
             <p>{this.state.message}</p>
           </div>
         ) : (
           <div>
             <br />
-            <p>Please click on a Tutorial...</p>
+            <p></p>
           </div>
         )}
       </div>
