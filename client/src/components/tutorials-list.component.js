@@ -99,7 +99,7 @@ export default class TutorialsList extends Component {
             <input
               type="text"
               className="form-control"
-              placeholder="Search by title"
+              placeholder="Buscar por nombre"
               value={searchTitle}
               onChange={this.onChangeSearchTitle}
             />
@@ -109,13 +109,13 @@ export default class TutorialsList extends Component {
                 type="button"
                 onClick={this.searchTitle}
               >
-                Search
+                Buscar
               </button>
             </div>
           </div>
         </div>
         <div className="col-md-6">
-          <h4>Tutorials List</h4>
+          <h4>Lista de Canciones</h4>
 
           <ul className="list-group">
             {tutorials &&
@@ -137,28 +137,28 @@ export default class TutorialsList extends Component {
             className="m-3 btn btn-sm btn-danger"
             onClick={this.removeAllTutorials}
           >
-            Remove All
+            Eliminar Todos
           </button>
         </div>
         <div className="col-md-6">
           {currentTutorial ? (
             <div>
-              <h4>Tutorial</h4>
+              <h4 >Cancion</h4>
               <div>
-                <label>
-                  <strong>Title:</strong>
+                <label >
+                  <strong>Nombre:</strong>
                 </label>{" "}
                 {currentTutorial.title}
               </div>
               <div>
                 <label>
-                  <strong>Description:</strong>
+                  <strong>Artista:</strong>
                 </label>{" "}
                 {currentTutorial.description}
               </div>
               <div>
                 <label>
-                  <strong>Status:</strong>
+                  <strong>Estado:</strong>
                 </label>{" "}
                 {currentTutorial.published ? "Published" : "Pending"}
               </div>
@@ -167,13 +167,13 @@ export default class TutorialsList extends Component {
                 to={"/tutorials/" + currentTutorial.id}
                 className="badge badge-warning"
               >
-                Edit
+                Editar
               </Link>
             </div>
           ) : (
             <div>
               <br />
-              <p>Please click on a Tutorial...</p>
+            
             </div>
           )}
         </div>
