@@ -62,13 +62,6 @@ label{
   text-decoration: none;
 }
 
-.nav-link {
-  color: #8a2435;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-decoration: none;
-}
-
 .card {
   background-color: #fff;
   border-radius: 5px;
